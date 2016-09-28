@@ -4,5 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>DEFAULT</groupId>
   <artifactId>testls</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>DEFAULT</groupId>
+      <artifactId>Base</artifactId>
+      <version>[1.8.0]</version>
+    </dependency>
+  </dependencies>
 </project>

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <flow id="02e70604-4c87-4c71-bcf2-58c3e178f589">
-  <descriptionCdata><![CDATA[02e70604-4c87-4c71-bcf2-58c3e178f589.description=<pre>\n\n\nInputs:\n    host - The host name to connect to\n    username - Username for host\n    password - Password for host\n    port - Port\n    sessionId - Session Id\n    characterSet - Character Set\n\nResults:\n    STDOUT0 - Standard out of the command on step0\n    returnResult0 - output of the command on step 0\n\nResponses:\n    failure - Something went wrong\n    success - Shell command executed successfully\n</pre>\n
+  <descriptionCdata><![CDATA[02e70604-4c87-4c71-bcf2-58c3e178f589.description=<pre>\n\n\nInputs\:\n    host - The host name to connect to\n    username - Username for host\n    password - Password for host\n    port - Port\n    sessionId - Session Id\n    characterSet - Character Set\n\nResults\:\n    STDOUT0 - Standard out of the command on step0\n    returnResult0 - output of the command on step 0\n\nResponses\:\n    failure - Something went wrong\n    success - Shell command executed successfully\n</pre>\n
 ]]></descriptionCdata>
   <annotation>02e70604-4c87-4c71-bcf2-58c3e178f589.description</annotation>
   <name>ls</name>
@@ -16,7 +17,9 @@
       <inputSymbol>host</inputSymbol>
       <listDelimiter>,</listDelimiter>
       <record>false</record>
+      <prompt></prompt>
       <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
     </userInputBinding>
     <userInputBinding id="cea2827c-7a1d-4224-bca6-c212a84b46df">
       <annotation></annotation>
@@ -29,7 +32,9 @@
       <inputSymbol>username</inputSymbol>
       <listDelimiter>,</listDelimiter>
       <record>false</record>
+      <prompt></prompt>
       <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
     </userInputBinding>
     <userInputBinding id="f8609271-1740-4c89-8656-00b766ffc13d">
       <annotation></annotation>
@@ -41,9 +46,10 @@
       <isPersisted>false</isPersisted>
       <inputSymbol>password</inputSymbol>
       <listDelimiter>,</listDelimiter>
-      <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
       <record>false</record>
+      <prompt></prompt>
       <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
     </userInputBinding>
     <userInputBinding id="070a9f04-69dd-4820-908b-eb1cf1712bce">
       <annotation></annotation>
@@ -56,7 +62,9 @@
       <inputSymbol>port</inputSymbol>
       <listDelimiter>,</listDelimiter>
       <record>false</record>
+      <prompt></prompt>
       <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
     </userInputBinding>
     <userInputBinding id="1747fa15-5a32-4e49-8b9c-82cab9facd8a">
       <annotation></annotation>
@@ -69,7 +77,9 @@
       <inputSymbol>sessionId</inputSymbol>
       <listDelimiter>,</listDelimiter>
       <record>false</record>
+      <prompt></prompt>
       <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
     </userInputBinding>
     <userInputBinding id="61ddc774-e7e4-4417-a7e9-37a81cf00873">
       <annotation></annotation>
@@ -82,7 +92,9 @@
       <inputSymbol>characterSet</inputSymbol>
       <listDelimiter>,</listDelimiter>
       <record>false</record>
+      <prompt></prompt>
       <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
     </userInputBinding>
   </inputs>
   <possibleResponses>
@@ -92,6 +104,7 @@
       <isDefault>false</isDefault>
       <onFailure>false</onFailure>
       <type>ERROR</type>
+      <matchRules/>
     </opResponse>
     <opResponse id="2ef8c642-3201-432d-9a20-1859aed3cb43">
       <annotation></annotation>
@@ -99,6 +112,7 @@
       <isDefault>false</isDefault>
       <onFailure>false</onFailure>
       <type>RESOLVED</type>
+      <matchRules/>
     </opResponse>
   </possibleResponses>
   <availableResultExpressions/>
@@ -121,7 +135,7 @@
   <historyCheckPointFlow>false</historyCheckPointFlow>
   <steps>
     <step id="63481805-8e88-47ce-80ac-60f1dea2edea">
-      <annotation>02e70604-4c87-4c71-bcf2-58c3e178f589.63481805-8e88-47ce-80ac-60f1dea2edea.description</annotation>
+      <annotation></annotation>
       <name>SSH Shell</name>
       <bounds>
         <x>0.0</x>
@@ -141,6 +155,7 @@
       <historyCheckPointStep>false</historyCheckPointStep>
       <scriptResultStep>false</scriptResultStep>
       <resultContextKey>SSH Shell</resultContextKey>
+      <userPrompt></userPrompt>
       <bindings>
         <staticBinding id="0e3ad832-fe79-47f5-93e6-d07dc50f64f6">
           <fromContextKey>host</fromContextKey>
@@ -201,7 +216,7 @@ send ls</value>
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="0b7d957c-63c6-4e7c-8c7d-5cee5b1bf4bd">
+        <loggedUserIdentityBinding id="ca74c53c-f149-4153-b144-46a1de403110">
           <fromContextKey>password</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -211,9 +226,9 @@ send ls</value>
           <isPersisted>false</isPersisted>
           <inputSymbol>password</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value></value>
           <record>false</record>
-        </staticBinding>
+          <identityAttribute>USERNAME</identityAttribute>
+        </loggedUserIdentityBinding>
         <staticBinding id="9011528d-9170-4409-aa5c-fc8d9fcab84f">
           <fromContextKey>newlineCharacters</fromContextKey>
           <assignFromContext>true</assignFromContext>
@@ -309,6 +324,10 @@ send ls</value>
             <refId>63481805-8e88-47ce-80ac-60f1dea2edea</refId>
           </source>
           <positions/>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
         </transition>
         <transition id="e1817466-1be2-4e3b-bceb-031464cb7c7a">
           <annotation></annotation>
@@ -325,6 +344,10 @@ send ls</value>
             <refId>63481805-8e88-47ce-80ac-60f1dea2edea</refId>
           </source>
           <positions/>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
         </transition>
       </transitions>
       <properties/>
@@ -363,52 +386,8 @@ send ls</value>
       </assignments>
       <throttleSize>0</throttleSize>
     </step>
-    <returnStep id="c29bcb68-a20e-4265-9b21-6abd98dce913">
-      <annotation>02e70604-4c87-4c71-bcf2-58c3e178f589.c29bcb68-a20e-4265-9b21-6abd98dce913.description</annotation>
-      <name>ERROR : failure</name>
-      <bounds>
-        <x>0.0</x>
-        <y>150.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>true</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>false</checkPointStep>
-      <historyCheckPointStep>false</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <resultContextKey>ERROR : failure</resultContextKey>
-      <bindings/>
-      <transitions>
-        <transition id="c8cf034d-e48a-498e-9a73-51070d0b12b9">
-          <annotation></annotation>
-          <name>failure</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>failure</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>c29bcb68-a20e-4265-9b21-6abd98dce913</refId>
-          </destination>
-          <source>
-            <refId>c29bcb68-a20e-4265-9b21-6abd98dce913</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>ERROR</returnStepType>
-      <assignments/>
-    </returnStep>
     <returnStep id="6a2b7046-000a-4a5d-b0c8-d97751d58d97">
-      <annotation>02e70604-4c87-4c71-bcf2-58c3e178f589.6a2b7046-000a-4a5d-b0c8-d97751d58d97.description</annotation>
+      <annotation></annotation>
       <name>RESOLVED : success</name>
       <bounds>
         <x>150.0</x>
@@ -428,6 +407,7 @@ send ls</value>
       <historyCheckPointStep>false</historyCheckPointStep>
       <scriptResultStep>false</scriptResultStep>
       <resultContextKey>RESOLVED : success</resultContextKey>
+      <userPrompt></userPrompt>
       <bindings/>
       <transitions>
         <transition id="39ae75b0-13c4-4c9b-9a3e-c3444a937476">
@@ -449,6 +429,51 @@ send ls</value>
       </transitions>
       <properties/>
       <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
+    <returnStep id="c29bcb68-a20e-4265-9b21-6abd98dce913">
+      <annotation></annotation>
+      <name>ERROR : failure</name>
+      <bounds>
+        <x>0.0</x>
+        <y>150.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>true</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>false</checkPointStep>
+      <historyCheckPointStep>false</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <resultContextKey>ERROR : failure</resultContextKey>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="c8cf034d-e48a-498e-9a73-51070d0b12b9">
+          <annotation></annotation>
+          <name>failure</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>failure</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>c29bcb68-a20e-4265-9b21-6abd98dce913</refId>
+          </destination>
+          <source>
+            <refId>c29bcb68-a20e-4265-9b21-6abd98dce913</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>ERROR</returnStepType>
       <assignments/>
     </returnStep>
   </steps>
