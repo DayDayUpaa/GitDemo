@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flow id="df552781-1590-41f6-be70-ea8b89ada0e8">
-  <descriptionCdata><![CDATA[df552781-1590-41f6-be70-ea8b89ada0e8.0e42ac4d-caf8-499f-ab1a-68fb4328ec65.prompt=Protocol\:
-df552781-1590-41f6-be70-ea8b89ada0e8.31cf48b6-62be-4f90-af7b-18ab0f188549.prompt=Host\:
-df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.description=<pre>This retrieves CPU utilization metrics using vmstat\n\nInputs\:\n\nhost\:  the system to check\nusername\: the user to log into this system as\npassword\: the password to log in with\nport - port number for connecting to the host\nprotocol - the protocol used to run the command (can be one of ssh, ROSH, GlobalShell, Telnet, RSH, local or WMI)\ntimeout - (optional, default 90 seconds) time in milliseconds to wait for the command to complete\npty - (true, false) whether to use pty\nprivateKeyFile - The absolute path to the private key file for remote host.\nsasHost - the host we want to run the ROSH command on\nsasHostUsername - the username used to run the ROSH command on sasHost\nusernamePrompt - the prompt that when seen should send the username\npasswordPrompt - the prompt that when given should send the password\n\nResponses\:\n\nsuccess\: the data was obtained\nfailure\: the data could not be obtained\n\nResult\:\n\nThe raw result of the vmstat command\n\nExtra Results\:\n\nbusyPercent - what percent of the CPU is busy\nuserPercent - the percent of the CPU used by user processes\nidlePercent - what percent of the CPU is idle\nioWait - CPU IO Wait percent\nsystemPercent - the percent of the CPU used by system processes\n\n</pre>
+<flow id="efee91f3-29a3-4127-a251-a01b696931b9">
+  <descriptionCdata><![CDATA[efee91f3-29a3-4127-a251-a01b696931b9.2aea73e9-5931-45f6-91b1-3d120c0ea4c4.prompt=Protocol\:
+efee91f3-29a3-4127-a251-a01b696931b9.bf329588-c2a1-4421-a8fe-f32fdcc62cd8.prompt=Host\:
+efee91f3-29a3-4127-a251-a01b696931b9.e81e6f61-cd45-41bf-920b-4f0610fec673.description=<pre>This retrieves CPU utilization metrics using vmstat\n\nInputs\:\n\nhost\:  the system to check\nusername\: the user to log into this system as\npassword\: the password to log in with\nport - port number for connecting to the host\nprotocol - the protocol used to run the command (can be one of ssh, ROSH, GlobalShell, Telnet, RSH, local or WMI)\ntimeout - (optional, default 90 seconds) time in milliseconds to wait for the command to complete\npty - (true, false) whether to use pty\nprivateKeyFile - The absolute path to the private key file for remote host.\nsasHost - the host we want to run the ROSH command on\nsasHostUsername - the username used to run the ROSH command on sasHost\nusernamePrompt - the prompt that when seen should send the username\npasswordPrompt - the prompt that when given should send the password\n\nResponses\:\n\nsuccess\: the data was obtained\nfailure\: the data could not be obtained\n\nResult\:\n\nThe raw result of the vmstat command\n\nExtra Results\:\n\nbusyPercent - what percent of the CPU is busy\nuserPercent - the percent of the CPU used by user processes\nidlePercent - what percent of the CPU is idle\nioWait - CPU IO Wait percent\nsystemPercent - the percent of the CPU used by system processes\n\n</pre>
 ]]></descriptionCdata>
   <annotation></annotation>
   <name>cpu</name>
   <categories/>
   <inputs/>
   <possibleResponses>
-    <opResponse id="28de8761-ba0e-4976-b54e-a6a2dedd5a22">
+    <opResponse id="5bc0b04e-5d9d-476b-8607-30f45b1c2750">
       <annotation></annotation>
       <name>success</name>
       <isDefault>true</isDefault>
@@ -17,7 +17,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
       <type>RESOLVED</type>
       <matchRules/>
     </opResponse>
-    <opResponse id="62e7d10d-932c-4d84-9832-c056d1cf9d50">
+    <opResponse id="1a9ab991-dd00-4efa-ae42-f782422b055b">
       <annotation></annotation>
       <name>failure</name>
       <isDefault>false</isDefault>
@@ -27,14 +27,14 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
     </opResponse>
   </possibleResponses>
   <availableResultExpressions/>
-  <resultExpression id="586b22ca-3ccb-471c-997f-69dcf7e7021d">
+  <resultExpression id="50736317-3444-4e48-9e8e-22c7b5424c51">
     <annotation></annotation>
     <name>FailureMessage</name>
     <fieldName>FailureMessage</fieldName>
     <sourceType>RAWRESULT</sourceType>
     <filters/>
   </resultExpression>
-  <iconSpec id="c11747c4-02c1-487b-bc80-33a99bab6d1a">
+  <iconSpec id="b0dfb37b-6ae2-4909-ba4e-97f10eb678d2">
     <baseIcon>flow.png</baseIcon>
     <basePath>System</basePath>
     <readOnly>false</readOnly>
@@ -45,12 +45,12 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
   <compatibleRuntimeContext>false</compatibleRuntimeContext>
   <historyCheckPointFlow>true</historyCheckPointFlow>
   <steps>
-    <step id="9cdecd9d-746f-4040-a913-64ca0d8a85bd">
-      <annotation>df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.description</annotation>
+    <step id="e81e6f61-cd45-41bf-920b-4f0610fec673">
+      <annotation>efee91f3-29a3-4127-a251-a01b696931b9.e81e6f61-cd45-41bf-920b-4f0610fec673.description</annotation>
       <name>CPU Metrics</name>
       <bounds>
-        <x>43.0</x>
-        <y>47.0</y>
+        <x>153.0</x>
+        <y>76.0</y>
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
@@ -67,7 +67,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
       <scriptResultStep>false</scriptResultStep>
       <userPrompt></userPrompt>
       <bindings>
-        <userInputBinding id="31cf48b6-62be-4f90-af7b-18ab0f188549">
+        <userInputBinding id="bf329588-c2a1-4421-a8fe-f32fdcc62cd8">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -78,11 +78,11 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <inputSymbol>host</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>df552781-1590-41f6-be70-ea8b89ada0e8.31cf48b6-62be-4f90-af7b-18ab0f188549.prompt</prompt>
+          <prompt>efee91f3-29a3-4127-a251-a01b696931b9.bf329588-c2a1-4421-a8fe-f32fdcc62cd8.prompt</prompt>
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
-        <userInputBinding id="40127bd0-97fe-4ba1-ba33-554d8fedee4c">
+        <userInputBinding id="8ff67071-81dc-46b1-b3df-faae664af61a">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -97,7 +97,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
-        <userInputBinding id="3e9005e6-4e19-4c1d-9fcc-8affec073784">
+        <userInputBinding id="33782833-2dad-4fb4-8145-fde4399c99b1">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -113,7 +113,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
-        <staticBinding id="a53238c2-620b-4339-b595-7a5186d2a252">
+        <staticBinding id="1e599a99-c4e0-4f34-b20b-11dc17fb4574">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -125,7 +125,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="0e42ac4d-caf8-499f-ab1a-68fb4328ec65">
+        <userInputBinding id="2aea73e9-5931-45f6-91b1-3d120c0ea4c4">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -136,7 +136,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <inputSymbol>protocol</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>df552781-1590-41f6-be70-ea8b89ada0e8.0e42ac4d-caf8-499f-ab1a-68fb4328ec65.prompt</prompt>
+          <prompt>efee91f3-29a3-4127-a251-a01b696931b9.2aea73e9-5931-45f6-91b1-3d120c0ea4c4.prompt</prompt>
           <isMultiSelect>false</isMultiSelect>
           <link>
             <refId>f5eba44b-b975-4b67-897f-2faabf86d2aa</refId>
@@ -144,7 +144,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           </link>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
-        <staticBinding id="f2d7e331-feca-4628-8f92-094645efc14c">
+        <staticBinding id="3e9b6104-2720-4e98-a872-577b9bb0634f">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -156,7 +156,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="5680b876-544d-43a4-8435-642d1e0da498">
+        <staticBinding id="17d6b58b-1a3b-4659-93c6-fe0fe807df14">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -168,7 +168,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="e0f5e230-3506-4daa-8b08-17513101c1a8">
+        <staticBinding id="7da7e771-6b65-48a0-8b4c-139caee20c79">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -180,7 +180,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="c9333678-dea3-4a5b-9386-df7f951d1955">
+        <staticBinding id="8e7df853-267a-4798-852a-46f47babc164">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -192,7 +192,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="649efae5-5721-4374-9f77-e43f85407452">
+        <staticBinding id="c28af19e-a65a-4cb7-9917-d826261f4256">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -204,7 +204,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="0af605db-edbf-42f1-aea0-a8b5fd707218">
+        <staticBinding id="7cac3885-ba9e-47ee-be4a-b8b8eb781b36">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -216,7 +216,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="3e06b48f-ac02-4e17-b424-4d42eafee013">
+        <staticBinding id="2f0bed71-6f3e-4d71-92ba-7ce9dcd8aa70">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -230,36 +230,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
         </staticBinding>
       </bindings>
       <transitions>
-        <transition id="9f708c3b-22e0-494d-9873-1a170370d435">
-          <annotation></annotation>
-          <name>success</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>success</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>32b74ba6-8cb6-4d1b-9094-2161487e93c1</refId>
-          </destination>
-          <source>
-            <refId>9cdecd9d-746f-4040-a913-64ca0d8a85bd</refId>
-          </source>
-          <positions>
-            <point>
-              <x>93.0</x>
-              <y>81.0</y>
-            </point>
-            <point>
-              <x>345.0</x>
-              <y>62.0</y>
-            </point>
-          </positions>
-          <labelPosition>
-            <x>333.0</x>
-            <y>0.0</y>
-          </labelPosition>
-        </transition>
-        <transition id="8936486f-91e5-4a29-ab14-6a0d458a5dd0">
+        <transition id="6e1b0637-8ee1-45cb-ba3c-c7d6b9920324">
           <annotation></annotation>
           <name>failure</name>
           <command>NEXT</command>
@@ -268,19 +239,48 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>c51aa3c8-6063-468b-8a46-872bd0b323f6</refId>
+            <refId>56e055ae-eaf2-4afa-87f6-410b0cd7c96d</refId>
           </destination>
           <source>
-            <refId>9cdecd9d-746f-4040-a913-64ca0d8a85bd</refId>
+            <refId>e81e6f61-cd45-41bf-920b-4f0610fec673</refId>
           </source>
           <positions>
             <point>
-              <x>93.0</x>
-              <y>81.0</y>
+              <x>203.0</x>
+              <y>110.0</y>
             </point>
             <point>
-              <x>100.0</x>
-              <y>247.0</y>
+              <x>219.0</x>
+              <y>262.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+        <transition id="6ff1107e-22d4-4e44-ac17-b60b38db1fb1">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>7256f006-0784-4545-b5ff-101a69a8d65b</refId>
+          </destination>
+          <source>
+            <refId>e81e6f61-cd45-41bf-920b-4f0610fec673</refId>
+          </source>
+          <positions>
+            <point>
+              <x>203.0</x>
+              <y>110.0</y>
+            </point>
+            <point>
+              <x>436.0</x>
+              <y>129.0</y>
             </point>
           </positions>
           <labelPosition>
@@ -296,56 +296,12 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
       <assignments/>
       <throttleSize>0</throttleSize>
     </step>
-    <returnStep id="32b74ba6-8cb6-4d1b-9094-2161487e93c1">
-      <annotation></annotation>
-      <name>Resolved : success</name>
-      <bounds>
-        <x>295.0</x>
-        <y>28.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>false</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>true</checkPointStep>
-      <historyCheckPointStep>true</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <userPrompt></userPrompt>
-      <bindings/>
-      <transitions>
-        <transition id="8686b79f-cf2f-4f3a-96e3-7d01d1e94de3">
-          <annotation></annotation>
-          <name>return</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>success</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>32b74ba6-8cb6-4d1b-9094-2161487e93c1</refId>
-          </destination>
-          <source>
-            <refId>32b74ba6-8cb6-4d1b-9094-2161487e93c1</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>RESOLVED</returnStepType>
-      <assignments/>
-    </returnStep>
-    <returnStep id="c51aa3c8-6063-468b-8a46-872bd0b323f6">
+    <returnStep id="56e055ae-eaf2-4afa-87f6-410b0cd7c96d">
       <annotation></annotation>
       <name>Error : failure</name>
       <bounds>
-        <x>50.0</x>
-        <y>213.0</y>
+        <x>169.0</x>
+        <y>228.0</y>
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
@@ -363,7 +319,7 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
       <userPrompt></userPrompt>
       <bindings/>
       <transitions>
-        <transition id="a58e3b71-5f46-4fd0-90c9-b9250e9aec40">
+        <transition id="fed7387f-b028-4566-a1b1-636f89cd39ed">
           <annotation></annotation>
           <name>return</name>
           <command>NEXT</command>
@@ -372,10 +328,10 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>c51aa3c8-6063-468b-8a46-872bd0b323f6</refId>
+            <refId>56e055ae-eaf2-4afa-87f6-410b0cd7c96d</refId>
           </destination>
           <source>
-            <refId>c51aa3c8-6063-468b-8a46-872bd0b323f6</refId>
+            <refId>56e055ae-eaf2-4afa-87f6-410b0cd7c96d</refId>
           </source>
           <positions/>
         </transition>
@@ -384,6 +340,50 @@ df552781-1590-41f6-be70-ea8b89ada0e8.9cdecd9d-746f-4040-a913-64ca0d8a85bd.descri
       <returnStepType>ERROR</returnStepType>
       <assignments/>
     </returnStep>
+    <returnStep id="7256f006-0784-4545-b5ff-101a69a8d65b">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>386.0</x>
+        <y>95.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="7fe941aa-deb4-4e30-b98c-309e89b3e251">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>7256f006-0784-4545-b5ff-101a69a8d65b</refId>
+          </destination>
+          <source>
+            <refId>7256f006-0784-4545-b5ff-101a69a8d65b</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
   </steps>
-  <startSteps>9cdecd9d-746f-4040-a913-64ca0d8a85bd</startSteps>
+  <startSteps>e81e6f61-cd45-41bf-920b-4f0610fec673</startSteps>
 </flow>
